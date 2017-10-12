@@ -1,4 +1,4 @@
-/* Global Layout Set-up */
+/* Main Layout Set-up */
 * { 
   box-sizing: border-box;
 }
@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #0499ff;
+  color: lightskyblue;
 }
 a:hover {
   color: #6633ff;
@@ -86,19 +86,30 @@ header .profile-image:hover {
   background-color: #222;
   color: blue;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    margin: auto;
+}
+
 .card {
-  margin: 30px;
+  margin: auto;
+    margin-top: 20px;
   padding: 20px 40px 40px;
-  max-width: 500px;
+  max-width: 85%;
   text-align: center;
-  background: purple;
+  background: lightskyblue;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
 }
 .card2 {
-  margin: 30px;
+  margin:  auto;
+    margin-top: 20px;
   padding: 20px 40px 40px;
-  max-width: 500px;
+  max-width: 85%;
   text-align: center;
   background: white;
   border-bottom: 4px solid #ccc;
@@ -129,12 +140,12 @@ ul.skills {
 footer {
   width: 100%;
   min-height: 30px;
+    text-align: center;
   padding: 20px 0 40px 20px;
 }
 
 footer .copyright {
   top: -8px;
-  margin-right: 20px;
   font-size: .75em;
 }
 
@@ -174,15 +185,37 @@ a.social:hover {
   clear: both;
 }
 
+
+
+
+
+
+
+
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
-  .flex {
-      display: flex;
-      max-width: 1200px;
-      justify-content: space-around;
-      margin: 0 auto;
-  }
+
+main, {
+display: flex;
+flex-wrap: wrap;
+align-items: stretch; 
+flex-direction: column;
+max-width: 1200px;
+background-color: ghostwhite;
+margin: auto;
+
+
+}
+.card, .card2 {
+
+margin-top: 40px;
+width: 80%;
+justify-content: space-between;
+
+}    
+ 
 
   header {
     min-height: 450px;
@@ -199,10 +232,6 @@ a.social:hover {
     
   }
 
-  main {
-    padding-top: 50px;
-  }
-
   main p {
     line-height: 1.6em;
   }
@@ -210,7 +239,9 @@ a.social:hover {
   footer {
     font-size: 1.3em;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: auto;
+    
+      text-align: center;
   }
 
 }
